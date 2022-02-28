@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    config:
+      fail-fast: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
