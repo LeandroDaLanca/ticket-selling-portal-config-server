@@ -2,8 +2,8 @@ server:
   port: 8081
 spring:
   datasource:
-    password: test
-    username: test
+    password: rootpass
+    username: root
     driver-class-name: com.mysql.jdbc.Driver
     uri: jdbc:mysql://localhost:3306/event-service
   jpa:
