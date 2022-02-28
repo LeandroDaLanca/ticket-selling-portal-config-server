@@ -1,6 +1,15 @@
 server:
   port: 8081
 spring:
+  datasource:
+    password: test
+    username: test
+    driver-class-name: com.mysql.jdbc.Driver
+    uri: jdbc:mysql://localhost:3306/event-service
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
   cloud:
     config:
       fail-fast: true
