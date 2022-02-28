@@ -1,6 +1,15 @@
 server:
   port: 8080
 spring:
+  datasource:
+    password: rootpass
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    uri: jdbc:mysql://localhost:3306/ticket-ordering-service
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
   cloud:
     config:
       fail-fast: true
