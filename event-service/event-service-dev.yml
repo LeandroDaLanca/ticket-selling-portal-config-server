@@ -5,7 +5,7 @@ spring:
     password: rootpass
     username: root
     driver-class-name: com.mysql.jdbc.Driver
-    uri: jdbc:mysql://mysqldata:3306/event-service?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysqldata:3306/event-service?createDatabaseIfNotExist=true
   jpa:
     show-sql: true
     hibernate:
