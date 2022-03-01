@@ -11,7 +11,8 @@ spring:
     hibernate:
       ddl-auto: update
 eureka:
-  serviceUrl:
+  client:
+    serviceUrl:
       defaultZone: http://discovery:8761/eureka/
 management:
   endpoints:
