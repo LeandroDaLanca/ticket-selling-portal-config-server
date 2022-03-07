@@ -10,10 +10,10 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
 management:
   endpoints:
     web:
