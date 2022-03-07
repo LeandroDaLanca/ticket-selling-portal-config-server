@@ -15,7 +15,7 @@ spring:
       host: discovery
       discovery:
         instanceId: ${spring.application.name}:${server.port}:${random.value}
-        health-check-url: http://ticket-ordering-service:8081/actuator/health
+        health-check-url: http://ticket-ordering-service:8080/actuator/health
 management:
   endpoints:
     web:
