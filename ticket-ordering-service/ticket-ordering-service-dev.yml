@@ -10,10 +10,6 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-  cloud:
-    consul:
-      discovery:
-        instanceId: ${spring.application.name}:${server.port}:${random.value}
 management:
   endpoints:
     web:
