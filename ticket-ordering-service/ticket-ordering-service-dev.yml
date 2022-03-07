@@ -12,7 +12,7 @@ spring:
       ddl-auto: update
   cloud:
     consul:
-      host: localhost
+      host: discovery
       port: 8500
 management:
   endpoints:
