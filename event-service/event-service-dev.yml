@@ -12,8 +12,8 @@ spring:
       ddl-auto: update
   cloud:
     consul:
-      host: discovery
-      port: 8500
+      discovery:
+        instanceId: ${spring.application.name}:${server.port}:${random.value}
 management:
   endpoints:
     web:
