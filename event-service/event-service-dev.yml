@@ -15,7 +15,7 @@ spring:
       host: discovery
       discovery:
         instanceId: ${spring.application.name}:${server.port}:${random.value}
-        health-check-url: http://localhost:8081/actuator/health
+        health-check-url: http://event-service:8081/actuator/health
 management:
   endpoints:
     web:
