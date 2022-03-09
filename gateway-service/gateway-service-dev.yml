@@ -17,15 +17,11 @@ spring:
             - Path=/ticket-ordering/**
           filters:
             - RewritePath=/ticket-ordering/(?<path>.*), /$\{path}
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://discovery:8761/eureka/
+    consul:
+      host: discovery
+      discovery:
+        instanceId: ${spring.application.name}:${server.port}:${random.value}
+        health-check-url: http://gateway-service:8072/actuator/health
 management:
   endpoints:
     web:
