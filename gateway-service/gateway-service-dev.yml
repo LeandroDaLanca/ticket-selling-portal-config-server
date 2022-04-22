@@ -22,7 +22,7 @@ spring:
       host: discovery
       discovery:
         instanceId: ${spring.application.name}:${server.port}:${random.value}
-        health-check-url: http://gateway-service:8072/actuator/health
+        health-check-url: http://gateway:8072/actuator/health
 management:
   endpoints:
     web:
