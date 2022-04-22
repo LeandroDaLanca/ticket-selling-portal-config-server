@@ -13,7 +13,7 @@ spring:
           predicates:
             - Path=/api/v1/events/**
           filters:
-            - RewritePath=/api/v1/events/(?<path>.*), api/v1/$\{path}
+            - RewritePath=/api/v1/events/(?<path>.*), /api/v1/$\{path}
         - id: ticket-ordering-service
           uri: lb://ticket-ordering-service
           predicates:
