@@ -20,7 +20,6 @@ spring:
             - Path=/ticket-ordering/**
           filters:
             - RewritePath=/ticket-ordering/(?<path>.*), /$\{path}
-            - TokenRelay=
     consul:
       host: discovery
       discovery:
