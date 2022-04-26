@@ -16,6 +16,7 @@ spring:
             - POST
             - OPTIONS
             - DELETE
+            allowedHeaders: "*"
       routes:
         - id: event-service
           uri: lb://event-service
