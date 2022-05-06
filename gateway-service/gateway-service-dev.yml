@@ -33,9 +33,9 @@ spring:
         - id: keycloak
           uri: ${KEYCLOAK_URI}
           predicates:
-            - Path=/auth/**
+            - Path=/keycloak/**
           filters:
-            - RewritePath=/auth/(?<path>.*), /auth/$\{path}
+            - RewritePath=/keycloak/(?<path>.*), /$\{path}
             - Logging=Logging gateway for Keycloak, true, true
     consul:
       host: discovery
