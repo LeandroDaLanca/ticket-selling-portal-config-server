@@ -30,6 +30,10 @@ spring:
             - Path=/ticket-ordering/**
           filters:
             - RewritePath=/ticket-ordering/(?<path>.*), /$\{path}
+        - id: keycloak
+          uri: lb://keycloak
+          predicates:
+            - Path=/auth/**
     consul:
       host: discovery
       discovery:
