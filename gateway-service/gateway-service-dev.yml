@@ -36,6 +36,7 @@ spring:
             - Path=/auth/**
           filters:
             - RewritePath=/auth/(?<path>.*), /auth/$\{path}
+            - Logging=Logging gateway for Keycloak, true, true
     consul:
       host: discovery
       discovery:
