@@ -31,7 +31,7 @@ spring:
           filters:
             - RewritePath=/ticket-ordering/(?<path>.*), /$\{path}
         - id: keycloak
-          uri: lb://keycloak
+          uri: http://keycloak
           predicates:
             - Path=/auth/**
           filters:
