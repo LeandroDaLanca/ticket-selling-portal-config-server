@@ -30,13 +30,6 @@ spring:
             - Path=/ticket-ordering/**
           filters:
             - RewritePath=/ticket-ordering/(?<path>.*), /$\{path}
-        - id: keycloak
-          uri: ${KEYCLOAK_URI}
-          predicates:
-            - Path=/keycloak/**
-          filters:
-            - RewritePath=/keycloak/(?<path>.*), /$\{path}
-            - Logging=Logging gateway for Keycloak, true, true
     consul:
       host: discovery
       discovery:
