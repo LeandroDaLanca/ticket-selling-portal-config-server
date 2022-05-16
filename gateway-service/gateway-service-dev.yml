@@ -24,12 +24,14 @@ spring:
             - Path=/api/v1/events/**
           filters:
             - RewritePath=/api/v1/events/(?<path>.*), /api/v1/$\{path}
+            - Logging=START LOGGING
         - id: ticket-ordering-service
           uri: lb://ticket-ordering-service
           predicates:
             - Path=/ticket-ordering/**
           filters:
             - RewritePath=/ticket-ordering/(?<path>.*), /$\{path}
+            - Logging=START LOGGING
     consul:
       host: discovery
       discovery:
