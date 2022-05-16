@@ -25,6 +25,7 @@ spring:
           filters:
             - RewritePath=/api/v1/events/(?<path>.*), /api/v1/$\{path}
             - Logging=START LOGGING
+            - TokenRelay=
         - id: ticket-ordering-service
           uri: lb://ticket-ordering-service
           predicates:
