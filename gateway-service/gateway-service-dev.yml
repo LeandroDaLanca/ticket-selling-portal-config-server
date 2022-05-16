@@ -25,7 +25,7 @@ spring:
           filters:
             - RewritePath=/api/v1/events/(?<path>.*), /api/v1/$\{path}
             - Logging=START LOGGING
-            - PassUserInfoHeaders
+            - PassUserInfoHeaders=AUTH FILTER
         - id: ticket-ordering-service
           uri: lb://ticket-ordering-service
           predicates:
