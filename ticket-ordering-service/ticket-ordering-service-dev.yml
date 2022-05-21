@@ -5,7 +5,7 @@ spring:
     password: rootpass
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysqldata:3308/ticket-ordering-service?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysqldata-ticket-ordering-service:3308/ticket-ordering-service?createDatabaseIfNotExist=true
   jpa:
     show-sql: true
     hibernate:
