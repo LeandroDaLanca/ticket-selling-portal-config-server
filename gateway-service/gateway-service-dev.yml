@@ -29,9 +29,9 @@ spring:
         - id: ticket-ordering-service
           uri: lb://ticket-ordering-service
           predicates:
-            - Path=/ticket-ordering/**
+            - Path=/api/v1/ticket-ordering/**
           filters:
-            - RewritePath=/ticket-ordering/(?<path>.*), /$\{path}
+            - RewritePath=/api/v1/ticket-ordering/(?<path>.*), /api/v1/$\{path}
             - Logging=START LOGGING
     consul:
       host: discovery
