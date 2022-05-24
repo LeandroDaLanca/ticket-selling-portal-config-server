@@ -33,6 +33,7 @@ spring:
           filters:
             - RewritePath=/api/v1/ticket-ordering/(?<path>.*), /api/v1/$\{path}
             - Logging=START LOGGING
+            - PassUserInfoHeaders=AUTH FILTER TICKET ORDERING
     consul:
       host: discovery
       discovery:
