@@ -38,6 +38,7 @@ spring:
       discovery:
         instanceId: ${spring.application.name}:${server.port}:${random.value}
         health-check-url: https://gateway:8072/actuator/health
+        health-check-tls-skip-verify: true
 management:
   endpoints:
     web:
