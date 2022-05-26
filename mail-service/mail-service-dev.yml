@@ -1,0 +1,32 @@
+server:
+  port: 8092
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ticketing.portal.jevent@gmail.com
+    password: ogrjfqsjwckqygre
+    properties:
+      mail:
+          smtp:
+              auth: true
+              starttls:
+                  enable: true
+  cloud:
+    consul:
+      host: discovery
+      discovery:
+        instanceId: ${spring.application.name}:${server.port}:${random.value}
+        health-check-url: http://mail-service:8092/actuator/health
+  kafka:
+    consumer:
+      bootstrap-servers: kafka:9092
+      group-id: 1
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health
