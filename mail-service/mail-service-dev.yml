@@ -24,7 +24,7 @@ spring:
       group-id: 1
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: be.jarchitects.mailservice.deserializer.CustomTicketOrderMailInfoDeserializer
+      value-deserializer: be.jarchitects.mailservice.deserializer.CustomTicketOrderMailInfoDtoDeserializer
 management:
   endpoints:
     web:
