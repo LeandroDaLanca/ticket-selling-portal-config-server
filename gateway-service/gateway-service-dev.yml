@@ -26,10 +26,6 @@ spring:
             - RewritePath=/api/v1/events/(?<path>.*), /api/v1/$\{path}
             - Logging=START LOGGING
             - PassUserInfoHeaders=AUTH FILTER
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 10
-                redis-rate-limiter.burstCapacity: 20
         - id: ticket-ordering-service
           uri: lb://ticket-ordering-service
           predicates:
